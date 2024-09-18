@@ -1,0 +1,126 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #b383e0, #054585);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.weather-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.weather-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.weather-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.weather-card h1 {
+    color: #333;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.weather-card .form-group {
+    margin-bottom: 20px;
+}
+
+.weather-card .form-control {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card .btn {
+    background-color: #022b57;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.weather-card .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.weather-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.weather-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.weather-card .text-danger {
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+.weather-card .weather-icon {
+    font-size: 4rem;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 767px) {
+    .weather-card {
+        padding: 20px;
+    }
+
+    .weather-card h1 {
+        font-size: 2rem;
+    }
+
+    .weather-card .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .weather-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .weather-card p {
+        font-size: 1.1rem;
+    }
+}
